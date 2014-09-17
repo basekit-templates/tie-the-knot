@@ -1,5 +1,5 @@
 {
-	"name":"Tie The Knot",
+	"name":"Mikkeli",
 	"thumbnail":"mikkeli.png",
 	"screenshot":"mikkeli.png",
     "tags": { "en": ["business", "clean", "corporate"] },
@@ -19,7 +19,7 @@
         "Swatch 2": {
             "color1":"#ffffff",
             "color2":"#333333",
-            "color3":"#fea6a2",
+            "color3":"#FEA6A2",
             "color4":"#333333",
             "color5":"#666666",
             "color6":"#666666",
@@ -37,7 +37,7 @@
         "Swatch 4": {
             "color1":"#ffffff",
             "color2":"#333333",
-            "color3":"#61a6ab",
+            "color3":"#61A6AB",
             "color4":"#333333",
             "color5":"#666666",
             "color6":"#666666",
@@ -46,7 +46,7 @@
         "Swatch 5": {
             "color1":"#ffffff",
             "color2":"#333333",
-            "color3":"#c1b398",
+            "color3":"#C1B398",
             "color4":"#333333",
             "color5":"#666666",
             "color6":"#666666",
@@ -55,9 +55,9 @@
     },
 
     "images":[
-        "images/slideshow/feature-slider.jpg",
-        "images/slideshow/feature-slider2.jpg",
-        "images/slideshow/feature-slider3.jpg",
+        "/images/tietheknot-feature1.jpg",
+        "/images/tietheknot-feature2.jpg",
+        "/images/tietheknot-feature3.jpg"
     ],
     "fontSwatch": {
        "title": "Merriweather / Source Sans Pro / Cabin",
