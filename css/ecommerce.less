@@ -282,6 +282,7 @@
         color: @color-swatch4;
 		line-height: @font-swatch4-line-height;
 		font-weight: normal;
+        padding-bottom: 20px;
 	}
 
 
@@ -339,14 +340,18 @@
 	// Remove Button
 
 	.ecombasket-remove-button {
-		position: absolute;
-		top: 9px;
-		right: 0;
-		text-indent: -9999px;
-		background-repeat: no-repeat;
-        background-position: 11% 48%;
-        background-size: 14px;
-	}
+		background-color: @color-swatch3;
+        color: @font-swatch7-color;
+        display: inline-block;
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        text-decoration: none;
+        padding: 0 0.6em;
+        border: none;
+        line-height: 1.4;
+        &:hover {
+            background-color: darken(@color-swatch2, 10%);
+        }
+    }
 
 
 	// Price
