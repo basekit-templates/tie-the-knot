@@ -1,0 +1,550 @@
+/*	===============================
+	Colour Swatches
+	===============================
+	"color1": == Background
+	"color2": == Contrast colour
+	"color3": == Button colour
+	"color4": == Title colour
+	"color5": == Paragraph colour
+	"color6": == Nav text colour
+	"color7": == Header BG colour
+	=============================== */
+
+/*	===============================
+	Font Swatches
+	===============================
+	"font1":  == Heading 1
+	"font2":  == Heading 2
+	"font3":  == Heading 3
+	"font4":  == Heading 4
+	"font5":  == Paragraph
+	"font6":  == Navigation Text
+	"font7":  == Buttons
+	"font8":  == Feature Title
+	"font9":  == Feature Subtitle
+	"font10": == Logo
+	=============================== */
+
+
+
+
+// -----------------------------
+// #Imports
+// -----------------------------
+
+
+@import "@{templateCommon}/basekit-bootstrap.less";
+@import "@{templateLocal}/css/ecommerce.less";
+@import "@{templateLocal}/css/widgets.less";
+@import "@{templateLocal}/css/menu.less";
+@import "@{templateLocal}/css/blog.less";
+
+
+
+
+
+// -----------------------------
+// #Page Settings
+// -----------------------------
+
+
+// Wrapper
+
+.wrapper {
+	.clearfix;
+    width: 90%;
+    margin: 0 5%;
+}
+
+
+ul, li {
+	margin: 0;
+}
+
+
+
+
+
+// Blockquote
+
+blockquote {
+  border-left: 5px solid @color-swatch2;
+  margin: 1.5em 0px;
+  padding: 10px 10px 10px 50px;
+}
+
+
+blockquote:before {
+  color: @color-swatch5;
+  content: open-quote;
+  font-size: 4em;
+  padding: 1px 0 10px 10px;
+}
+
+
+blockquote p {
+  display: inline;
+}
+
+
+
+
+
+// -----------------------------
+// #Feature-Slider
+// -----------------------------
+
+
+.slideshow-wrapper {
+
+
+	.widget.responsiveslideshow {
+
+
+		// another slideshow class
+
+		.slideshow-widget {
+			height: auto;
+		}
+
+		.slideshow-image-list {
+
+			@media only screen
+			and (min-width : 770px) {
+			min-height: 700px;
+			}
+			@media @mobile {
+				min-height: 350px;
+			}
+		}
+
+
+		// Slider title and description styles
+
+		.content-wrapper {
+			background: fade(@color-swatch5, 15%);
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			text-align: center;
+
+			span.title,
+			span.description {
+				display: block;
+				position: relative;
+				margin: 0 auto;
+				top: 45%;
+				width: 80%;
+			}
+
+			span.title {
+				font-family: @font-swatch8-font-family;
+				font-size: @font-swatch8-font-size;
+				color: @font-swatch8-color;
+				font-weight: @font-swatch8-font-weight;
+				line-height: @font-swatch8-line-height;
+				@media @mobile {
+					font-size: bkscale(@font-swatch8-font-size, 0.75);
+					line-height: bkscale(@font-swatch8-line-height, 0.85);
+				}
+			}
+			span.description {
+				font-family: @font-swatch9-font-family;
+				font-size: @font-swatch4-font-size;
+				color: @font-swatch9-color;
+				font-weight: @font-swatch9-font-weight;
+				margin-top: 6px;
+				line-height: @font-swatch9-line-height;
+				@media @mobile {
+					font-size: bkscale(@font-swatch9-font-size, 0.75);
+					line-height: bkscale(@font-swatch9-line-height, 0.85);
+					margin-top: 0;
+				}
+			}
+		}
+
+
+		// Controls
+
+		.slideshow-widget-controls {
+			position: absolute;
+			bottom: 15px;
+			left: 49%;
+			@media @mobile {
+				bottom: 12px;
+				left: 44%;
+			}
+		}
+
+		.slideshow-widget-controls .dot {
+			width: 12px;
+			height: 12px;
+			background-color: transparent;
+			border-radius: 10px;
+			border: 3px solid @color-swatch1;
+
+			&.selected {
+				background-color: @color-swatch1;
+			}
+		}
+
+
+		// Buttons
+
+		.btns-move {
+			.btn-prev {
+				left: 10px;
+				height: 60px;
+				width: 60px;
+				background: image('/images/arrow-left.svg') center no-repeat;
+			}
+
+			.btn-next {
+				right: 10px;
+				height: 60px;
+				width: 60px;
+				background: image('/images/arrow-right.svg') center no-repeat;
+			}
+
+			@media @mobile {
+				.btn-next,
+				.btn-prev {
+					width: 36px;
+					height: 36px;
+					background-size: 36px;
+					&:hover {
+						background-size: 36px;
+					}
+
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+// -----------------------------
+// #Header
+// -----------------------------
+
+
+// Company Info
+
+.company-info {
+	.clearfix;
+	float: left;
+	width: 30%;
+	@media @tablet {
+		width: 90%;
+	}
+}
+
+
+// Logo
+
+.widget.logo, .widget.companyname {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.widget.companyname a {
+	font-swatch: @font-swatch10-font-size;
+	line-height: @font-swatch10-line-height;
+}
+
+.template-header {
+	.clearfix;
+	clear: both;
+	position: relative;
+	background-color: @color-swatch7;
+	border-top: 5px solid @color-swatch4;
+	border-bottom: 5px solid @color-swatch4;
+	margin-bottom: 60px;
+	padding: 20px 0 20px 0;
+
+
+
+	// Header company name
+
+	.widget.companyname {
+		.clearfix;
+		margin-left: 10px;
+		a {
+			font-size: @font-swatch10-font-size;
+		}
+	}
+
+
+	// Stuck menu styles
+
+	&.stuckMenu.isStuck {
+	width: 100%;
+	z-index: 9999;
+	}
+
+}
+
+
+
+// -----------------------------
+// Extended Navigation
+// -----------------------------
+
+
+// Nav clearfix
+
+.widget.extendednavigation{
+	.clearfix;
+}
+
+
+// General nav positioning
+
+.nav {
+	float: right;
+	width: 70%;
+	@media @tablet {
+		float: none;
+		width: 100%;
+	}
+
+	@media (max-width: 960px) {
+		max-width: 100%;
+	}
+}
+
+.template-header {
+
+	@media (min-width: 770px) {
+		.wrapper {
+			display: -webkit-flexbox;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-flex-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+	}
+}
+
+
+// The mobile nav icon
+
+.widget .extendednavigation a.pull {
+	top: 10px;
+	height: 30px;
+	width: 30px;
+	margin-top: 4px;
+
+	&:after {
+		// *INSERT SOME WICKED STYLES IN HERE FOR THE BURGER ICON*
+	}
+}
+
+
+// The rest of the nav styles
+
+.widget .extendednavigation ul,
+div.widget.extendednavigation ul {
+	@media @tablet {
+		margin: 20px 0 auto;
+		padding: 15px 0 15px 0;
+	}
+
+
+	li {
+
+		float: left;
+
+		@media @tablet {
+			padding: 0;
+		}
+
+		// // This adds the right hand side border to the nav
+		// border-right: 1px solid @color-swatch2;
+
+		// // This removes the right hand side border from the last child
+		// &:last-child {
+		// 	border-right: 0;
+		// }
+
+		// // This removes the right hand side border from the dropdown menu
+		// &:hover ul li {
+		// 	border-right: 0;
+		// 	padding: 0 5px 0 5px;
+		// }
+
+		// @media @tablet {
+		// 	padding: 0px;
+		// 	border-right: 0; // This removes the right hand side border from the mobile nav
+		// 	border-bottom: 1px solid @color-swatch2;
+		// }
+
+
+		// Nav Links
+
+		a {
+			color: @font-swatch6-color;
+			line-height: 40px;
+			&:hover {
+				color: darken(@font-swatch6-color,10%);
+			}
+
+			@media @tablet {
+				padding: 5px 20px;
+			}
+		}
+
+
+		// Dropdown Menu
+
+		&:hover ul {
+			margin: 0;
+			width: 100%;
+			min-width: 10px;
+			background-color: @color-swatch1;
+			background-image: none;
+			-webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+			-moz-box-shadow:    0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+			box-shadow:         0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+			li {
+				border-bottom: 1px solid lighten(@color-swatch2, 10%);
+			}
+			li:first-child {
+				@media @tablet {
+					border-top: 1px solid lighten(@color-swatch2, 10%);
+				}
+			}
+			li:last-child {
+				border-bottom: none;
+			}
+		}
+
+		&.folder {
+			color: @font-swatch6-color;
+			&:hover {
+				color: darken(@font-swatch6-color,10%);
+  				background-color: @color-swatch1;
+			}
+
+			&:after {
+				border: 0;
+			}
+
+			span.text {
+				color: @font-swatch6-color;
+				line-height: 40px;
+				&:hover {
+					color: darken(@font-swatch6-color,10%);
+				}
+
+				@media @tablet {
+					padding: 5px 20px;
+				}
+			}
+
+			& > .text:after {
+				display: inline-block;
+                content: "";
+               	width: 0;
+               	height: 0;
+                border: 4px solid transparent;
+                border-top-color: lighten(@color-swatch5, 15%);
+                margin-left: 0.6em;
+                margin-bottom: -2px;
+			}
+
+				@media @tablet {
+					& > .text:before {
+					display: inline-block;
+	                content: "";
+	               	width: 0;
+	               	height: 0;
+	                border: 4px solid transparent;
+	                border-top-color: lighten(@color-swatch5, 15%);
+	                margin-right: 0.65em;
+	                margin-bottom: -1px;
+	            }
+
+	            	& > .text:after {
+	            		display: none;
+	            }
+
+			}
+
+		}
+
+	}
+
+}
+
+
+
+
+
+// -----------------------------
+// Footer
+// -----------------------------
+
+
+footer.template-footer {
+	padding: 4em 0 1.5em;
+	background-color: @color-swatch4;
+	color: @color-swatch1;
+	text-align: center;
+
+	h2 {
+	color: @color-swatch1;
+	font-size:bkscale(@font-swatch2-font-size, 0.9);
+	padding-bottom: 20px;
+	}
+
+	.widget.companyname {
+		padding-bottom: 40px;
+			a {
+			color: @color-swatch1;
+			font-swatch: @font-swatch10-font-size;
+			}
+	}
+
+	.widget.map {
+		margin: 0 auto;
+	}
+
+
+	// Profile widget styles
+
+	.widget.profile {
+		.bk-profile-phone {
+			&:before {
+	        content: '';
+	        background-image: image('/images/Phone.svg');
+	        background-size: 20px;
+	        background-repeat: no-repeat;
+	        float: left;
+	        width: 20px;
+	        height: 20px;
+	        padding-right: 8px;
+	    	}
+	    	@media @mobile {
+		    	display: block;
+				margin-top: 20px;
+	    	}
+		}
+	}
+
+}
+
+
+
+
+

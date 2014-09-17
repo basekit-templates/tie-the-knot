@@ -1,0 +1,42 @@
+{% extends "layout.twig" %}
+{% block content %}
+
+<section class="page home">
+
+	<div class="slideshow-wrapper">
+			{{widget('responsiveslideshow', 'responsiveslideshow',
+				{'duration':'3',
+					'transSpeed': '1000',
+					'transType': 'fade',
+					'showButtons': true,
+					'showBullets': true,
+					'allowPause': false,
+					'allowLoop': false,
+					'showDescription': false,
+					'showTitle': false,
+					'crop': true,
+					'images': [
+						{'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/tietheknot-feature1.jpg', 'title':'lorum ipsum',
+						 'description': 'lorum ipsum'},
+						 {'imageHeight':'auto', 'imageWidth':'100%', 'url':asset('/images/tietheknot-feature1.jpg', 'title':'lorum ipsum',
+						 'description': 'lorum ipsum'},
+						 {'imageHeight':'auto', 'imageWidth':'100%', 'url':'url':asset('/images/tietheknot-feature1.jpg', 'title':'lorum ipsum',
+						 'description': 'lorum ipsum'}
+
+					]
+				})|raw
+			}}
+		</div>
+
+		{% include 'includes/header.twig' %}
+
+		<div class="wrapper">
+			{{zone('main')|raw}}
+		</div>
+
+	{% include 'includes/footer.twig' %}
+
+</section>
+
+
+{% endblock %}
