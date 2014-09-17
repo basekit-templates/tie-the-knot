@@ -6,7 +6,8 @@
 		<div class="contain">
 		        <div class="footer-content">
 		        {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-		        {{widget('map', 'footer-map', {'height': '150', 'zoom': '15', 'address': 'profile'})|raw}}
+		        {{widget('profile', 'footer-address', { 'profileType':'address', 'address':'profile', 'refreshtime':'1800000'})|raw}}
+		        {{widget('profile', 'footer-map', { 'profileType':'map', 'map':'profile', 'refreshtime':'1800000'})|raw}}
 		        </div>
 		    </div>
 
