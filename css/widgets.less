@@ -292,7 +292,7 @@ button.btn,
 		a, p a, span, a .bk-full-name {
 			color: @font-swatch4-color;
 			font-family: @font-swatch4-font-family;
-			font-size: @font-swatch4-font-size;
+			font-size: @font-swatch5-font-size;
 			font-weight: 400;
 			line-height: @font-swatch4-line-height;
 			letter-spacing: @font-swatch4-letter-spacing;
@@ -397,53 +397,62 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 
 // -----------------------------
-// #Slideshow
+// Slideshow
 // -----------------------------
 
 
+
+
+
 .widget.responsiveslideshow {
-	.btn-play, &:hover span.btn-play,
-	.title, .description {
+	.btn-play, &:hover span.btn-play{
 		display: none;
 	}
-
-
 	// Main
-
 	.slideshow-widget {
-
 		// Buttons
-
 		.btns-move {
 			.btn-prev {
 				left: 10px;
 				height: 40px;
 				width: 40px;
-				background: image('/images/grey-arrow-left.svg') center no-repeat;
-				background-size: 30px;
+				background: image('/images/img-arrow-left.svg') center no-repeat;
 				color: transparent;
+				background-color: @color-swatch2;
 			}
 			.btn-next {
 				right: 10px;
 				height: 40px;
 				width: 40px;
-				background: image('/images/grey-arrow-right.svg') center no-repeat;
-				background-size: 30px;
+				background: image('/images/img-arrow-right.svg') center no-repeat;
 				color: transparent;
+				background-color: @color-swatch2;
 			}
 			@media @mobile {
 				.btn-next,
 				.btn-prev {
-					width: 40px;
-					height: 40px;
-					background-size: 40px;
+					width: 26px;
+					height: 26px;
+					background-size: 12px;
 					&:hover {
-						background-size: 40px;
+						background-size: 12px;
 					}
 				}
 			}
 		}
 	}
+
+	.content-wrapper {
+		background: @color-swatch3;
+		opacity: 0.7;
+		text-align: center;
+	}
+
+	.title,
+	.description {
+		display: block;
+	}
+
 
 	.slideshow-widget-controls {
 		margin-top: 0;
@@ -454,7 +463,6 @@ footer .widget.profile .bk-profile-socialicons span a {
 			border: 1px solid;
 			border-radius: 10px;
 			border: 1px solid @color-swatch7;
-
 			&.selected {
 				background-color: transparent;
 				border: 1px solid @color-swatch3;
@@ -468,9 +476,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 	}
 }
 
-
 // Responsive
-
 .widget.responsiveslideshow .slideshow-image-list,
 .widget.responsiveslideshow .slideshow-widget {
 	@media @mobile {
@@ -478,6 +484,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 		min-height: 250px;
 	}
 }
+
 
 
 
