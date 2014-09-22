@@ -1,8 +1,8 @@
 {
 	"name":"Tie the knot",
-	"thumbnail":"mikkeli.png",
-	"screenshot":"mikkeli.png",
-    "tags": { "en": ["business", "clean", "corporate"] },
+	"thumbnail":"tie-the-knot.png",
+	"screenshot":"tie-the-knot.png",
+    "tags": { "en": ["wedding", "clean", "event"] },
     "pageTypes":["home"],
     "templateType":"standard",
     "colorSwatches":
@@ -65,7 +65,7 @@
             "font-family": "\"Abril Fatface\", \"Palatino Linotype\", serif",
             "font-size": "32px",
             "font-weight": "400",
-            "line-height": "inherit",
+            "line-height": "35px",
             "color": "@color-swatch4",
             "letter-spacing": "inherit"
         },
