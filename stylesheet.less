@@ -48,6 +48,10 @@
 // -----------------------------
 
 
+pre {
+	white-space: normal;
+}
+
 // Wrapper
 
 .wrapper {
@@ -150,6 +154,9 @@ blockquote p {
 				@media @tablet {
 					font-size: bkscale(@font-swatch8-font-size, 0.75);
 					line-height: 64px;
+				}
+				@media @mobile {
+					font-size: bkscale(@font-swatch8-font-size, 0.75);
 				}
 			}
 			span.description {
@@ -366,8 +373,6 @@ div.widget.extendednavigation ul {
 
 
 	li {
-
-		float: left;
 
 		@media @tablet {
 			padding: 0;
