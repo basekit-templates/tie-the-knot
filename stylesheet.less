@@ -134,6 +134,9 @@ blockquote p {
 			@media @tablet {
 				padding-bottom: 170px;
 			}
+			@media @mobile {
+				top: -20px;
+			}
 
 			span.title,
 			span.description {
@@ -156,7 +159,7 @@ blockquote p {
 					line-height: 64px;
 				}
 				@media @mobile {
-					font-size: bkscale(@font-swatch8-font-size, 0.55);
+					font-size: bkscale(@font-swatch8-font-size, 0.50);
 					line-height: @font-swatch1-line-height;
 				}
 			}
@@ -323,7 +326,6 @@ blockquote p {
 	float: right;
 	width: 60%;
 	@media @tablet {
-		float: none;
 		width: 100%;
 	}
 
@@ -352,10 +354,10 @@ blockquote p {
 // The mobile nav icon
 
 .widget .extendednavigation a.pull {
-	top: 10px;
+	top: -30px;
 	height: 30px;
 	width: 30px;
-	margin-top: 4px;
+	float: right;
 
 	&:after {
 		// *INSERT SOME WICKED STYLES IN HERE FOR THE BURGER ICON*
