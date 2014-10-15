@@ -444,8 +444,8 @@ footer .widget.profile .bk-profile-socialicons span a {
 
 	.content-wrapper {
 		background: @color-swatch3;
-		opacity: 0.7;
 		text-align: center;
+		padding: 10px;
 	}
 
 	.title,
@@ -462,7 +462,7 @@ footer .widget.profile .bk-profile-socialicons span a {
 			background-color: transparent;
 			border: 1px solid;
 			border-radius: 10px;
-			border: 1px solid @color-swatch7;
+			border: 1px solid @color-swatch4;
 			&.selected {
 				background-color: transparent;
 				border: 1px solid @color-swatch3;
@@ -558,6 +558,9 @@ footer .widget.profile .bk-profile-socialicons span a {
 			opacity: 0;
 			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 			transition: opacity 0.35s, transform 0.35s;
+			@media @mobile {
+			display: none;
+			}
 
 			&:after {
 				position: absolute;
@@ -585,6 +588,9 @@ footer .widget.profile .bk-profile-socialicons span a {
 			opacity: 0;
 			-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 			transition: opacity 0.35s, transform 0.35s;
+			@media @mobile {
+			display: none;
+			}
 		}
 
 		&:hover {
